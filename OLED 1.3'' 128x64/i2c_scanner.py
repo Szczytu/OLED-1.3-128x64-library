@@ -13,7 +13,6 @@ def I2CScanner(bus, scl_Pin, sda_Pin):
            print(f"{len(devices_list)} devices found:")
            for device_number, device_address in enumerate(devices_list,start=1):
             print(f"{device_number} device found on address (HEX): {hex(device_address)}")
-
         else:
             print("No devices found on I2C bus")
             
@@ -21,5 +20,8 @@ def I2CScanner(bus, scl_Pin, sda_Pin):
         print(f"An error occurred: {error}")
 
 
-
-
+## call this function in the main file or here below
+#bus=0
+#scl_Pin=1
+#sda_Pin=0
+#i2c=I2CScanner(bus, scl_Pin, sda_Pin)
